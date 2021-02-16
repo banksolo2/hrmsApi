@@ -21,12 +21,16 @@ const employees = require('./routes/employees');
 const leave = require('./routes/leave');
 const deductions = require('./routes/deductions');
 const reports = require('./routes/reports');
+const payslips = require('./routes/payslips');
 
 app.use('/payrolls', payrolls);
 app.use('/employees', employees);
 app.use('/leave', leave);
 app.use('/deductions', deductions);
 app.use('/reports', reports);
+app.use('/payslips', payslips);
+
+
 
 app.get('/', function(req, res){
     res.send("Hello World");
